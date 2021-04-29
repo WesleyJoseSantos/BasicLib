@@ -9,10 +9,9 @@
  * 
  */
 
-#ifndef __TASKHANDLE__H__
-#define __TASKHANDLE__H__
+#pragma once
 
-#include "TimerPulse.h"
+#include "TimerPulse.hpp"
 
 class TaskHandle
 {
@@ -25,5 +24,3 @@ public:
         }
     }
 };
-
-#endif  //!__TASKHANDLE__H__

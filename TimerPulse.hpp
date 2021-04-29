@@ -9,8 +9,7 @@
  * 
  */
 
-#ifndef __TIMERPULSE__H__
-#define __TIMERPULSE__H__
+#pragma once
 
 #include "Arduino.h"
 
@@ -39,5 +38,3 @@ public:
         return aux;
     }
 };
-
-#endif  //!__TIMERPULSE__H__

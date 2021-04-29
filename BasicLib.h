@@ -9,10 +9,5 @@
  * 
  */
 
-#ifndef __BASICLIB__H__
-#define __BASICLIB__H__
-
-#include "TimerPulse.h"
-#include "Task.h"
-
-#endif  //!__BASICLIB__H__
+#include "TimerPulse.hpp"
+#include "TaskHandle.hpp"
