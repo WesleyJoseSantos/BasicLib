@@ -1,5 +1,5 @@
 /**
- * @file TimerPulse.h
+ * @file TimerHandle.h
  * @author your name (you@domain.com)
  * @brief 
  * @version 0.1
@@ -13,7 +13,7 @@
 
 #include "Arduino.h"
 
-class TimerPulse
+class TimerHandle
 {
 private:
     unsigned long prevMillis;
