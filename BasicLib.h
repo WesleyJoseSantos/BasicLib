@@ -9,5 +9,6 @@
  * 
  */
 
-#include "TimerPulse.hpp"
+#include "TimerHandle.hpp"
 #include "TaskHandle.hpp"
+#include "Math.hpp"

@@ -11,12 +11,12 @@
 
 #pragma once
 
-#include "TimerPulse.hpp"
+#include "TimerHandle.hpp"
 
 class TaskHandle
 {
 private:
-    TimerPulse taskTimer;
+    TimerHandle taskTimer;
 public:
     void run(int time, void (*task)()){
         if(taskTimer.tick(time)){
