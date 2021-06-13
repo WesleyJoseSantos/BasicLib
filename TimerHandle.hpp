@@ -20,20 +20,24 @@ private:
     unsigned long time;
     bool aux;
 public:
+    TimerHandle(){}
+    TimerHandle(unsigned long timer){
+        time = timer;
+    }
     void setTimer(unsigned long time){
         this->time = time;
     }
     bool tick(){
-        return tick(time);
+        return this->tick(time);
     }
     bool tick(unsigned long time){
+        aux = false;
         if(prevMillis == 0){
             prevMillis = millis();
-            aux = 0;
         }
         if(millis() - prevMillis >= time){
             aux = true;
-            prevMillis = 0;
+            prevMillis += time;
         }
         return aux;
     }
