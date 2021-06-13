@@ -17,10 +17,27 @@ class TaskHandle
 {
 private:
     TimerHandle taskTimer;
+    void (*task)();
 public:
-    void run(int time, void (*task)()){
-        if(taskTimer.tick(time)){
-            task();
+    TaskHandle(){}
+    void init(unsigned long timer, void (*task)()){
+        setTimer(timer);
+        setTaskCallback(task);
+    }
+    void setTimer(unsigned long timer){
+        taskTimer.setTimer(timer);
+    }
+    void setTaskCallback(void (*task)()){
+        this->task = task;
+    }
+    void run(unsigned long timer){
+        if(taskTimer.tick(timer)){
+            this->task();
+        }
+    }
+    void run(){
+        if(taskTimer.tick()){
+            this->task();
         }
     }
 };
