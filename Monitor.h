@@ -14,6 +14,6 @@
 
 #include "Arduino.h"
 
-#define monitor(x) Serial.print(#x);Serial.print(" = ");Serial.println(x);
+#define monitor(x) Serial.print(#x);Serial.print(" = ");Serial.println(x);  ///< Macro para monitoramento de variáveis
 
 #endif  //!__MONITOR__H__
